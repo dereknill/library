@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-dark">
+    <header class="bg-light">
+        <div class="container-xl">
+            <div class="logo-section">
+                <div class="logo-image-container">
+                    <img src="images/book.png" class="logo-image">
+                </div>
+                <div class="logo-text">Virtual Library</div>
+                <div class="logo-stats-container d-flex justify-content-end">
+                    <div class="logo-stats-grid">
+                        <div>Total Books:</div>
+                        <div id="numBooks"></div>
+                        <div>Read:</div>
+                        <div id="numBooksRead"></div>
+                        <div>Not Read:</div>
+                        <div id="numBooksNotRead"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="bg-dark">
+        <div class="container-xl d-flex align-items-center flex-column">
+            <button type="button" id="add-button" class="btn btn-primary my-2">ADD BOOK</button>
+            <div id="cardsContainer" class="my-1">
+
+            </div>
+        </div>
+    </main>
+
+    <div class="hide" id="add-book">
+        <form id="addBookForm">
+            <div class="mb-3">
+                <label for="inputBookName" class="form-label">Book Name:</label>
+                <input type="text" class="form-control" id="inputBookName" required>
+            </div>
+            <div class="mb-3">
+                <label for="inputAuthor" class="form-label">Author:</label>
+                <input type="text" class="form-control" id="inputAuthor" required>
+            </div>
+            <div class="mb-3">
+                <label for="inputNumPages" class="form-label">Number of Pages:</label>
+                <input type="number" class="form-control" id="inputNumPages" required>
+            </div>
+            <div class="mb-3">
+                <div class="form-label">Have you read this book?</div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="hasReadRadio" id="hasReadRadioYes">
+                    <label class="form-check-label" for="hasReadRadioYes">
+                        Yes
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="hasReadRadio" id="hasReadRadioNo" checked>
+                    <label class="form-check-label" for="hasReadRadioNo">
+                        No
+                    </label>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-primary" id="submitNewBook">Submit</button>
+                <button type="button" class="btn btn-danger" id="cancelNewBook">Cancel</button>
+            </div>
+        </form>
+    </div>
+    <div id="overlay-blur" class="hide">
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+
+</html>

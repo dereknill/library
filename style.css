@@ -1,0 +1,135 @@
+* {
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.logo-section {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: auto;
+}
+
+@media screen and (max-width: 650px) {
+  .logo-section {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto;
+  }
+}
+.logo-text {
+  display: flex;
+  font-size: 3rem;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 850px) {
+  .logo-text {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .logo-text {
+    grid-column: 1 / -1;
+  }
+}
+
+.logo-image {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 950px) {
+  .logo-image {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .logo-image {
+    display: none;
+  }
+}
+
+.logo-stats-container {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+@media screen and (max-width: 650px) {
+  .logo-stats-container {
+    margin: 10px auto;
+    grid-column: 1 / -1;
+  }
+}
+.logo-stats-grid {
+  border: 1px solid black;
+  padding: 5px 20px;
+  display: grid;
+  width: 200px;
+  grid-template-columns: 1fr auto;
+  grid-auto-rows: 2rem;
+  grid-column-gap: 5px;
+}
+
+@media screen and (max-width: 950px) {
+  .logo-stats-grid {
+    grid-auto-rows: 1.3rem;
+  }
+}
+#add-book {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 600px;
+  z-index: 2;
+  background-color: white;
+  border: 1px solid rgb(220, 220, 220);
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.form-label {
+  font-weight: bold !important;
+}
+
+.hide {
+  display: none;
+}
+
+#overlay-blur {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+@media screen and (max-width: 700px) {
+  #cardsContainer {
+    justify-content: center;
+  }
+}
+
+.card-not-read {
+  background-color: rgb(200, 200, 200);
+}
